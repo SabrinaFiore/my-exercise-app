@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="title">Users list</h1>
+      <label>Title user</label>
+      <!-- (input)="onModificaruser($event)" -->
+      <!-- ngModel, vamos a combinar proprety binding con event binding y se actualiza el cmp de manera automatica -->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="titleUser"
+      >
+      {{ titleUser }}
+      <!-- [..] indicamos a angular que quieremos modificar esta propriedad -->
+      <!-- la logica es inversa -->
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary"
+            [disabled]="addUser"
+            (click)="onCreateUser()">Add user
+          </button>
+          <p *ngIf="userCreated">{{ addUserStatus }} with title of {{ titleUser }} </p>
+        </div>
+      </div>
+      <app-user></app-user>
+    </div>
+  </div>
+</div>
+
