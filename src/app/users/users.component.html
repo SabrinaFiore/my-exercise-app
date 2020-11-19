@@ -1,4 +1,4 @@
-<div class="container">
+<div class="section container">
   <div class="row">
     <div class="col">
       <h1 class="title">Users list</h1>
@@ -15,14 +15,22 @@
       <!-- la logica es inversa -->
       <div class="row">
         <div class="col">
-          <button class="btn btn-primary"
+          <button
+            class="btn btn-primary section--xs--top-bottom"
             [disabled]="addUser"
             (click)="onCreateUser()">Add user
           </button>
-          <p *ngIf="userCreated">{{ addUserStatus }} with title of {{ titleUser }} </p>
+          <p *ngIf="userCreated; else withoutUsers ">{{ addUserStatus }} with title of {{ titleUser }} </p>
         </div>
       </div>
-      <app-user></app-user>
+      <ng-template #withoutUsers>
+        <p>
+          Name: {{ nameUser }}
+          Surname: {{ surnameUser }}
+          Age: {{ getAge() }}
+        </p>
+        <p>No add users</p>
+      </ng-template>
     </div>
   </div>
 </div>

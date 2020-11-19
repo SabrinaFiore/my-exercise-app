@@ -1,0 +1,13 @@
+.section {
+  border: 0.5px solid rgb(180, 180, 180);
+  padding: 3rem;
+  margin: 1rem;
+}
+
+.section--xs {
+  padding: 0.25rem 1rem;
+}
+
+.section--xs--top-bottom {
+  margin-bottom: 0.5rem!important;
+}

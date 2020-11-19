@@ -1,0 +1,14 @@
+<div class="section container">
+  <div class="col-xs-12">
+    <h3>{{title}}</h3>
+  </div>
+  <hr/>
+  <app-form
+    (userAdd)="onUserAdd($event)"
+  ></app-form>
+  <hr/>
+  <app-user *ngFor="let userElement of users; let i = index"
+   [user]="userElement"
+   [index]="i"
+  ></app-user>
+</div>

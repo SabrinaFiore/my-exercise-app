@@ -1,22 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from '../list-of-users/list-of-users.model';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
 })
+
 export class userComponent {
-
-  // interpolacion aceder a los elemento del ts desde el html
-  nameUser: 'Sabrina';
-  surnameUser: 'Fiore';
-  edad: number = 28 + 1;
-
-  // metodo --> se puede aceder a la variable tmb desde un metodo
-  getAge(): number {
-    return this.edad;
-  }
-
-  constructor() { }
-
+  @Input() user: User;
+  @Input() index: number;
 }

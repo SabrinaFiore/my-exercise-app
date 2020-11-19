@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class usersComponent {
+  // interpolacion aceder a los elemento del ts desde el html
+  nameUser: 'Sabrina';
+  surnameUser: 'Fiore';
+  edad: number = 28 + 1;
   addUser = false;
   addUserStatus = 'No se ha agregado ninguna user';
   titleUser = 'Engineer';
@@ -20,14 +24,18 @@ export class usersComponent {
   }
 
   // method -> event binding
-  onCreateUser() {
+  onCreateUser(): void {
     this.userCreated = true;
     this.addUserStatus = 'Add user';
+  }
+
+  // metodo --> se puede aceder a la variable tmb desde un metodo
+  getAge(): number {
+    return this.edad;
   }
 
   // onModificaruser(event: KeyboardEvent) {
   //   this.titleUser = (event.target as HTMLInputElement).value;
   //   console.log('entra');
   // }
-
 }
