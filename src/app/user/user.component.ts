@@ -6,7 +6,7 @@ import { User } from '../list-of-users/list-of-users.model';
   templateUrl: './user.component.html',
 })
 
-export class userComponent {
+export class UserComponent {
   @Input() user: User;
   @Input() index: number;
 }

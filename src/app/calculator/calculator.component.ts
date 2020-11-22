@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
 })
 
-export class calculatorComponent {
+export class CalculatorComponent implements OnInit {
   title = 'Calculator application';
-  numberA: number;
-  numberB: number;
-  result: number;
+  FatherResult: number;
+
+  onResult(result: number) {
+    this.FatherResult = result;
+  }
 
   constructor() { }
 
-  onAmount(): void {
-    this.result = this.numberA + this.numberB;
+  ngOnInit(): void {
   }
 
 }

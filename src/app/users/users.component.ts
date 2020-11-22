@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 
-export class usersComponent {
+export class UsersComponent {
   // interpolacion aceder a los elemento del ts desde el html
   nameUser: 'Sabrina';
   surnameUser: 'Fiore';

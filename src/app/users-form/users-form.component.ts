@@ -3,10 +3,10 @@ import { User } from '../list-of-users/list-of-users.model';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
+  templateUrl: './users-form.component.html',
 })
 
-export class FormComponent implements OnInit {
+export class UsersFormComponent implements OnInit {
   @Output() userAdd = new EventEmitter<User>();
 
   nameInput: string;
