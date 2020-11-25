@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { User } from '../list-of-users/list-of-users.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { User } from '../list-of-users/list-of-users.model';
 
 export class UsersFormComponent implements OnInit {
   @Output() userAdd = new EventEmitter<User>();
+  @ViewChild('nameInput') nameInput: ElementRef;
+  @ViewChild('surnameInput') surnameInput: ElementRef;
 
   // nameInput: string;
   // surnameInput: string;
@@ -15,8 +17,8 @@ export class UsersFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddUser(nameInput: HTMLInputElement, surnameInput: HTMLInputElement) {
-    let user1 = new User(nameInput.value, surnameInput.value);
+  onAddUser() {
+    let user1 = new User(this.nameInput.nativeElement.value, this.surnameInput.nativeElement.value);
     this.userAdd.emit(user1);
   }
 }
