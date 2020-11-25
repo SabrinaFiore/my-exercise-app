@@ -7,8 +7,9 @@
       id="name"
       placeholder="name"
       class="form-control"
-      [(ngModel)]="nameInput"
-    >
+      #nameInput
+      >
+      <!-- [(ngModel)]="nameInput" -->
   </div>
   <div class="form-group col-md-2">
     <label for="surname" class="sr-only">surname</label>
@@ -18,14 +19,15 @@
       id="surname"
       placeholder="surname"
       class="form-control"
-      [(ngModel)]="surnameInput"
-    >
+      #surnameInput
+      >
+      <!-- [(ngModel)]="surnameInput" -->
   </div>
   <div class="col">
     <button
       type="submit"
       class="btn btn-primary section--xs--top-bottom"
-      (click)="onAddUser()"
+      (click)="onAddUser(nameInput, surnameInput)"
       >Add
     </button>
   </div>

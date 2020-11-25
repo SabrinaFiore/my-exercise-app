@@ -9,13 +9,14 @@ import { User } from '../list-of-users/list-of-users.model';
 export class UsersFormComponent implements OnInit {
   @Output() userAdd = new EventEmitter<User>();
 
-  nameInput: string;
-  surnameInput: string;
+  // nameInput: string;
+  // surnameInput: string;
 
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
 
-  onAddUser() {
-    let user1 = new User(this.nameInput, this.surnameInput);
+  onAddUser(nameInput: HTMLInputElement, surnameInput: HTMLInputElement) {
+    let user1 = new User(nameInput.value, surnameInput.value);
     this.userAdd.emit(user1);
   }
 }
