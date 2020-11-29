@@ -3,9 +3,7 @@
     <h3>{{title}}</h3>
   </div>
   <hr/>
-  <app-user-form
-    (userAdd)="onUserAdd($event)"
-  ></app-user-form>
+  <app-user-form></app-user-form>
   <hr/>
   <app-user *ngFor="let userElement of users; let i = index"
    [user]="userElement"

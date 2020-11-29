@@ -11,6 +11,7 @@ import { ListOfUsersComponent } from './list-of-users/list-of-users.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CalculatorFormComponent } from './calculator-form/calculator-form.component';
 import { CalculatorResultBtnComponent } from './calculator-result-btn/calculator-result-btn.component';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { CalculatorResultBtnComponent } from './calculator-result-btn/calculator
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ LogginService ],
+  providers: [ LogginService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

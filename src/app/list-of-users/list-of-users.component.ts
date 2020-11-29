@@ -1,16 +1,20 @@
+import { UserService } from './../user.service';
 import { User } from './list-of-users.model';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LogginService } from '../logginService.service';
 
 @Component({
   selector: 'app-list-of-users',
   templateUrl: './list-of-users.component.html',
 })
 
-export class ListOfUsersComponent {
+export class ListOfUsersComponent implements OnInit{
   title = '03. List of users';
-  users: User[] = [new User('Sabrina', 'Fiore'), new User('Laura', 'Fiore')];
+  users: User[] = [];
 
-  onUserAdd(user: User): void {
-    this.users.push(user);
+  constructor(private logginService: LogginService, private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.users = this.userService.users;
   }
 }

@@ -1,3 +1,4 @@
+import { LogginService } from './../logginService.service';
 import { Component, Input } from '@angular/core';
 import { User } from '../list-of-users/list-of-users.model';
 
