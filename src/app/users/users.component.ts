@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 
 export class UsersComponent {
   // interpolacion aceder a los elemento del ts desde el html
+  title = '01. Profession od user list';
   nameUser: 'Sabrina';
   surnameUser: 'Fiore';
   edad: number = 28 + 1;

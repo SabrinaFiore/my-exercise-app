@@ -1,3 +1,4 @@
+import { LogginService } from './logginService.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +28,7 @@ import { CalculatorResultBtnComponent } from './calculator-result-btn/calculator
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ LogginService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

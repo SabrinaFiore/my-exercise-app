@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class ListOfUsersComponent {
-  title = 'List of users';
+  title = '03. List of users';
   users: User[] = [new User('Sabrina', 'Fiore'), new User('Laura', 'Fiore')];
 
-  onUserAdd(user: User) {
+  onUserAdd(user: User): void {
     this.users.push(user);
   }
 }

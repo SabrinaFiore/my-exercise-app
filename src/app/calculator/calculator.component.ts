@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CalculatorComponent implements OnInit {
-  title = 'Calculator application';
+  title = '02. Calculator application';
   FatherResult: number;
 
-  onResult(result: number) {
+  onResult(result: number): void {
     this.FatherResult = result;
   }
 
