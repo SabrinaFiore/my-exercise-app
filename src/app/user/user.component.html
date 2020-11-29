@@ -1,13 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
-    <div class="section--xs">
-      {{ index+1 }}: {{ user.name }} {{ user.surname }}
-      <button
-        type="submit"
+    <div class="section--xs items">
+      <input
+        type="checkbox"
         class="btn btn-info"
         (click)="emitWave()"
-        >Edit
-      </button>
+        >
+        <div class="items--name"> {{ index+1 }}: {{ user.name }} {{ user.surname }}</div>
     </div>
   </div>
 </div>

@@ -8,12 +8,12 @@ import { User } from '../list-of-users/list-of-users.model';
 })
 
 export class UsersFormComponent implements OnInit {
-  @ViewChild('nameInput') nameInput: ElementRef;
-  @ViewChild('surnameInput') surnameInput: ElementRef;
+  nameInput: string;
+  surnameInput: string;
 
   constructor(private userService: UserService ) {
     this.userService.wave.subscribe(
-      (index: number) => alert('Alert number:' + index + 1)
+      (index: number) => alert('Alert number:' + index)
     );
   }
 
@@ -21,7 +21,7 @@ export class UsersFormComponent implements OnInit {
   }
 
   onAddUser(): void {
-    const user1 = new User(this.nameInput.nativeElement.value, this.surnameInput.nativeElement.value);
+    const user1 = new User(this.nameInput, this.surnameInput);
     this.userService.addUser(user1);
   }
 }
