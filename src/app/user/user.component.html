@@ -2,6 +2,12 @@
   <div class="col-xs-12">
     <div class="section--xs">
       {{ index+1 }}: {{ user.name }} {{ user.surname }}
+      <button
+        type="submit"
+        class="btn btn-info"
+        (click)="emitWave()"
+        >Edit
+      </button>
     </div>
   </div>
 </div>
